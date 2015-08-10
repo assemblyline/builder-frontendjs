@@ -16,7 +16,7 @@ RUN wget --no-check-certificate https://bitbucket.org/ariya/phantomjs/downloads/
       && mv phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/\
       && rm -rf phantom*
 
-RUN npm install -g grunt-cli@0.1.13 bower@1.4.1
+RUN npm install -g grunt-cli@0.1.13 bower@1.4.1 jspm@0.15.7
 
 RUN npm config set cache /tmp/assemblyline/npm_cache
 
