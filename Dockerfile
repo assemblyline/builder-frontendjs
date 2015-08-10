@@ -11,7 +11,8 @@ RUN apt-get update -q\
       && gem update --system \
       && gem install compass
 
-RUN apt-get install -y build-essential g++ flex bison gperf ruby perl \
+RUN apt-get update \
+      && apt-get install -y build-essential g++ flex bison gperf ruby perl \
       libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
       libpng-dev libjpeg-dev python libx11-dev libxext-dev ttf-mscorefonts-installer \
       && git clone git://github.com/ariya/phantomjs.git \
@@ -20,7 +21,9 @@ RUN apt-get install -y build-essential g++ flex bison gperf ruby perl \
       && ./build.sh \
       && cp bin/phantomjs /usr/local/bin \
       && cd .. \
-      && rm -rf phantomjs
+      && rm -rf phantomjs \
+      && apt-get autoremove \
+      && rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g grunt-cli@0.1.13 bower@1.4.1 jspm@0.15.7
 
