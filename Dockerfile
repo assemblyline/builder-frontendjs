@@ -11,6 +11,15 @@ RUN apt-get update -q\
       && gem update --system \
       && gem install compass
 
+RUN apt-get update \
+      && apt-get install -qy fontforge \
+      && wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip \
+      && unzip woff-code-latest.zip -d sfnt2woff \
+      && cd sfnt2woff \
+      && make \
+      && mv sfnt2woff /usr/local/bin/ \
+      && gem install fontcustom
+
 RUN wget --quiet https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528/phantomjs-2.0.0-20150528-u1404-x86_64.zip \
       && unzip phantomjs-2.0.0-20150528-u1404-x86_64.zip \
       && mv phantomjs-2.0.0-20150528/bin/phantomjs /usr/local/bin/ \
