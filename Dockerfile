@@ -1,4 +1,4 @@
-FROM quay.io/assemblyline/nodejs:0.12.0
+FROM quay.io/assemblyline/nodejs:0.12.10
 
 RUN apt-get update -q\
       && apt-get install -qy software-properties-common\
