@@ -1,0 +1,24 @@
+[component]
+name = "FrontendJS Builder"
+repo = "quay.io/assemblyline/builder-frontendjs"
+
+[[version]]
+version       = "latest"
+node_version  = "0.12.14"
+grunt_version = "0.1.13"
+bower_version = "1.5.3"
+jspm_version  = "0.16.12"
+
+[[version]]
+version       = "node0.12"
+node_version  = "0.12.14"
+grunt_version = "1.2.0"
+bower_version = "1.7.9"
+jspm_version  = "0.16.34"
+
+[[version]]
+version       = "node6"
+node_version  = "6.1.0"
+grunt_version = "1.2.0"
+bower_version = "1.7.9"
+jspm_version  = "0.16.34"
