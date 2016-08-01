@@ -6,5 +6,4 @@ else
     echo $SSH_KEY > /tmp/id_rsa
     chmod 600 /tmp/id_rsa
     ssh -i /tmp/id_rsa "$@"
-    rm /tmp/id_rsa
 fi
