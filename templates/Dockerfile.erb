@@ -32,6 +32,7 @@ RUN apt-get update -q\
            grunt-cli@<%= data['grunt_version'] %> \
            bower@<%= data['bower_version'] %> \
            jspm@<%= data['jspm_version'] %> \
+           yarn@<%= data['yarn_version'] %> \
       && npm config set cache /tmp/assemblyline/npm_cache \
       && ssh-keyscan -H github.com > /etc/ssh/ssh_known_hosts
 

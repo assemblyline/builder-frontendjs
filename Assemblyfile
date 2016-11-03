@@ -8,6 +8,7 @@ node_version  = "0.12.14"
 grunt_version = "0.1.13"
 bower_version = "1.5.3"
 jspm_version  = "0.16.12"
+yarn_version  = "0.16.1"
 
 [[version]]
 version       = "node0.12"
@@ -15,6 +16,7 @@ node_version  = "0.12.14"
 grunt_version = "1.2.0"
 bower_version = "1.7.9"
 jspm_version  = "0.16.34"
+yarn_version  = "0.16.1"
 
 [[version]]
 version       = "node6"
@@ -22,3 +24,12 @@ node_version  = "6.1.0"
 grunt_version = "1.2.0"
 bower_version = "1.7.9"
 jspm_version  = "0.16.34"
+yarn_version  = "0.16.1"
+
+[[version]]
+version       = "node7"
+node_version  = "7.0.0"
+grunt_version = "1.2.0"
+bower_version = "1.7.9"
+jspm_version  = "0.16.47"
+yarn_version  = "0.16.1"
