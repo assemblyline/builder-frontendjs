@@ -3,6 +3,7 @@ FROM quay.io/assemblyline/nodejs:<%= data['node_version'] %>
 RUN apt-get update -q\
       && apt-get install -qy software-properties-common\
       && apt-add-repository ppa:brightbox/ruby-ng \
+      && add-apt-repository ppa:canonical-chromium-builds/stage \
       && apt-get update \
       && apt-get install -y \
            ruby2.2 \
@@ -13,6 +14,7 @@ RUN apt-get update -q\
            fontforge \
            libwebp5 \
            unzip \
+           chromium-browser \
       && apt-get purge -y --auto-remove software-properties-common \
       && echo 'gem: --no-document' > /etc/gemrc \
       && rm -rf /var/lib/apt/lists/* \
@@ -40,3 +42,4 @@ COPY .bowerrc /.bowerrc
 COPY bin/git_ssh /usr/src/bin/git_ssh
 
 ENV GIT_SSH=/usr/src/bin/git_ssh
+ENV CHROME_BIN=chromium-browser
