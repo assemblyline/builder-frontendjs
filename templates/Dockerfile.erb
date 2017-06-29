@@ -25,6 +25,11 @@ RUN apt-get update -q\
       && cd sfnt2woff \
       && make \
       && mv sfnt2woff /usr/local/bin/ \
+      && git clone --recursive https://github.com/google/woff2.git \
+      && cd woff2 \
+      && make clean all \
+      && mv woff2_compress /usr/local/bin/ \
+      && mv woff2_decompress /usr/local/bin/ \
       && gem install fontcustom \
       && wget --quiet https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528/phantomjs-2.0.0-20150528-u1404-x86_64.zip \
       && unzip phantomjs-2.0.0-20150528-u1404-x86_64.zip \
